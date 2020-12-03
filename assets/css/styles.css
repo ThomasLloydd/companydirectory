@@ -1,0 +1,243 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+td {
+  padding: 10px;
+}
+
+#employees-box {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+
+#managementDiv .card-title {
+  background-color: #dc3545;
+}
+
+#managementDiv .fas {
+  color: #dc3545;
+}
+
+.signout-icon {
+  font-size: 2rem;
+  color: rgb(95, 95, 246);
+}
+
+form {
+  cursor: default !important;
+}
+
+.card {
+  border-radius: 5px;
+  padding: 0px;
+  cursor: default;
+  background-color: white;
+  -webkit-box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.2);
+  margin: 1% 4%;
+  width: 25%;
+  display: inline-block;
+}
+
+.card-title {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  border-radius: 5px 5px 0 0;
+}
+
+.form-control {
+  display: inline-block;
+}
+
+.fas,
+.far {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.form-warning {
+  font-size: 13px;
+  visibility: hidden;
+  width: 95%;
+  text-align: right;
+  color: red;
+}
+
+.form-row {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form-row input:focus,
+.form-row-names input:focus {
+  border-radius: 20px;
+}
+.department-placeholder:disabled::placeholder {
+  color: white;
+}
+
+.scrollbar-sidebar {
+  overflow-y: auto !important;
+}
+
+.form-row-names label {
+  color: white;
+}
+
+.form-row-names input:disabled {
+  color: rgb(212, 212, 212);
+  background-color: rgba(1, 1, 1, 0);
+  border-color: rgba(1, 1, 1, 0);
+}
+
+.form-row input:disabled {
+  color: rgb(98, 98, 98);
+  background-color: rgba(1, 1, 1, 0);
+  border-color: rgba(1, 1, 1, 0);
+}
+
+#department-header input {
+  display: inline-block;
+  width: 80% !important;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(129, 129, 129, 0);
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.form-row-names input {
+  display: inline-block;
+  width: 45%;
+  border-radius: 20px;
+  border: 1px solid rgba(129, 129, 129, 0.219);
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.form-row-names h2 {
+  margin: 20px;
+}
+
+.form-row input,
+select {
+  display: inline-block;
+  border: 1px solid rgba(129, 129, 129, 0.219);
+  border-radius: 20px;
+  width: 80%;
+  padding: 5px;
+  margin: 5px;
+  text-align: right;
+}
+
+.form-row label {
+  display: inline-block;
+  width: 15%;
+}
+
+.form-row select {
+  text-align-last: right;
+  width: 80%;
+}
+
+.form-row select:disabled {
+  text-align-last: right;
+  width: 80%;
+  opacity: 1;
+  color: rgb(98, 98, 98);
+  background-color: rgba(1, 1, 1, 0);
+  border-color: rgba(1, 1, 1, 0);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+
+.form-row option {
+  direction: rtl;
+}
+
+.card button {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.close-form {
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 1px;
+}
+
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.76);
+  z-index: 15;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-container {
+  display: block;
+  position: relative;
+  min-width: 250px;
+  min-height: 200px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: white;
+  -webkit-box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.create-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.create-form .btn {
+  margin: 20px auto;
+}
+
+.deleteMeetingClose {
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  position: absolute;
+  right: 6px;
+  top: 5px;
+}
+
+@media only screen and (max-width: 1425px) {
+  .card {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .card {
+    width: 95%;
+    margin-bottom: 30px;
+  }
+}
