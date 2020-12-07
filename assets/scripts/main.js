@@ -24340,7 +24340,7 @@
                 "closed-sidebar-mobile closed-sidebar"
               )
             : r()(".app-container").removeClass(
-                "closed-sidebar-mobile closed-sidebar"
+                "closed-sidebar-mobile"
               );
         });
     });
@@ -28835,8 +28835,8 @@
             e(".app-container").toggleClass(t);
             var n = e(this);
             n.hasClass("is-active")
-              ? n.removeClass("is-active")
-              : n.addClass("is-active");
+              ? n.addClass("is-active")
+              : n.removeClass("is-active");
           }),
           e(".switch-container-class").on("click", function () {
             var t = e(this).attr("data-class");
@@ -41573,7 +41573,7 @@
             (this.transY = n),
             this.rootElement.node.setAttribute(
               "transform",
-              "scale(" + e + ") translate(" + t + ", " + n + ")"
+              "scale(" + 1 + ") translate(" + 1 + ", " + 1 + ")"
             );
         }),
         (d.SVGShapeElement = function (e, t) {

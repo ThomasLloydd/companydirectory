@@ -1,10 +1,7 @@
 <?php
-
 	$executionStartTime = microtime(true);
 
 	include("config.php");
-
-	header('Content-Type: application/json; charset=UTF-8');
 
 	$conn = new mysqli($cd_host, $cd_user, $cd_password, $cd_dbname, $cd_port, $cd_socket);
 
@@ -24,7 +21,7 @@
 
 	}	
 
-	$query = 'SELECT p.id, p.lastName, p.firstName, p.jobTitle, p.email, d.id as departmentId, d.name as department, l.name as location, l.id as locationID FROM personnel p LEFT JOIN department d ON (d.id = p.departmentID) LEFT JOIN location l ON (l.id = d.locationID) WHERE l.name = ' . $_REQUEST['location'] . 'ORDER BY p.lastName, p.firstName, d.name';
+	$query = 'SELECT DISTINCT d.id, d.name AS department,(SELECT count(p.id) FROM personnel p WHERE p.departmentID = d.id) AS employees, l.name AS location, l.id AS locationID FROM department d, location l, personnel p WHERE d.locationID = l.id AND l.id = '. $_REQUEST['id'] .' ORDER BY d.name';
 
 	$result = $conn->query($query);
 	
@@ -56,7 +53,9 @@
 	$output['status']['description'] = "success";
 	$output['status']['returnedIn'] = (microtime(true) - $executionStartTime) / 1000 . " ms";
 	$output['data'] = $data;
-	
+    
+    header('Content-Type: application/json; charset=UTF-8');
+    
 	mysqli_close($conn);
 
 	echo json_encode($output); 

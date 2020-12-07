@@ -1,11 +1,5 @@
 <?php
 
-
-	// example use from browser
-	// http://localhost/companydirectory/libs/php/getDepartmentByID.php?id=2
-	
-	// remove next two lines for production
-
 	ini_set('display_errors', 'On');
 	error_reporting(E_ALL);
 

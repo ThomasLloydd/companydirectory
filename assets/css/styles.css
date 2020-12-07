@@ -12,18 +12,17 @@ td {
   text-align: center;
 }
 
-
 #managementDiv .card-title {
-  background-color: #dc3545;
+  background-color:#836023;
 }
 
 #managementDiv .fas {
-  color: #dc3545;
+  color: #234683;
 }
 
-.signout-icon {
+.signout-icon .fas{
   font-size: 2rem;
-  color: rgb(95, 95, 246);
+  color: white;
 }
 
 form {
@@ -31,7 +30,7 @@ form {
 }
 
 .card {
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 0px;
   cursor: default;
   background-color: white;
@@ -44,10 +43,10 @@ form {
 }
 
 .card-title {
-  background-color: #007bff;
+  background-color: #234683;
   color: white;
   padding: 20px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 2px 2px 0 0;
 }
 
 .form-control {
@@ -57,7 +56,15 @@ form {
 .fas,
 .far {
   font-size: 2rem;
-  color: #007bff;
+  color:   #234683;
+}
+
+.btn-primary{
+  background-color: #234683;;
+}
+
+.login-form label, .login-form input {
+  display: inline-flex;
 }
 
 .form-warning {
@@ -102,9 +109,20 @@ form {
   border-color: rgba(1, 1, 1, 0);
 }
 
+.page-title-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.page-title-icon .fas {
+  font-size: 2rem !important;
+}
+
 #department-header input {
   display: inline-block;
-  width: 80% !important;
+  width: 90% !important;
   font-size: 1rem;
   border-radius: 20px;
   border: 1px solid rgba(129, 129, 129, 0);
@@ -181,18 +199,31 @@ select {
   top: 1px;
 }
 
-.form-overlay {
+.form-overlay, #confirm-overlay, #loading-overlay {
   position: fixed;
+  overflow-y: hidden;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.76);
   z-index: 15;
   text-align: center;
   display: none;
   flex-direction: column;
   justify-content: center;
+}
+
+#confirm-box {
+  margin: auto;
+  background-color: white;
+  max-width: 360px;
+  padding: 30px;
+  -webkit-box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.5);
+}
+#confirm-box p {
+  text-align: initial;
 }
 
 .form-container {
@@ -229,6 +260,138 @@ select {
   top: 5px;
 }
 
+#login {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+#login h1 {
+  font-size: 3rem;
+}
+
+#login-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+#login-img img {
+  height: 50vh;
+}
+
+#login-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  text-align: center;
+  align-items: center;
+}
+
+.login-form input {
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-width: 0 0 1px 0;
+}
+#login-form {
+  width: 300px;
+}
+
+.err-warning {
+  color: red;
+  font-size: 0.9em;
+  display: none;
+}
+
+.login-btn {
+  background-color: #26267e;
+  color: white;
+  margin: 20px;
+}
+
+.btn-danger{
+  background-color: #7e2626;
+}
+
+.wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+#login-form img {
+  height: 100px;
+  margin: 30px;
+}
+
+#loading-box{
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(253, 251, 251);
+  border-radius: 5px;
+  min-width: 200px;
+  text-align: center;
+  -webkit-box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.5);
+}
+
+.spinner {
+  margin: 0 auto;
+  width: 70px;
+  text-align: center;
+  color: black;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color:#836023;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+
 @media only screen and (max-width: 1425px) {
   .card {
     width: 40%;
@@ -239,5 +402,26 @@ select {
   .card {
     width: 95%;
     margin-bottom: 30px;
+  }
+
+  #login-right {
+    width: 100%;
+  }
+  #login-img {
+    display: none;
+  }
+
+  .wave {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .active .input-holder {
+    width: 240px !important;
+  }
+
+  .close {
+    left: 250px !important;
   }
 }
